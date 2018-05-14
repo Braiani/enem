@@ -1,69 +1,114 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\DataType;
 
 class DataTypesTableSeeder extends Seeder
 {
+
     /**
-     * Auto generated seed file.
+     * Auto generated seed file
+     *
+     * @return void
      */
     public function run()
     {
-        $dataType = $this->dataType('slug', 'users');
-        if (!$dataType->exists) {
-            $dataType->fill([
-                'name'                  => 'users',
-                'display_name_singular' => __('voyager::seeders.data_types.user.singular'),
-                'display_name_plural'   => __('voyager::seeders.data_types.user.plural'),
-                'icon'                  => 'voyager-person',
-                'model_name'            => 'TCG\\Voyager\\Models\\User',
-                'policy_name'           => 'TCG\\Voyager\\Policies\\UserPolicy',
-                'controller'            => '',
-                'generate_permissions'  => 1,
-                'description'           => '',
-            ])->save();
-        }
+        
 
-        $dataType = $this->dataType('slug', 'menus');
-        if (!$dataType->exists) {
-            $dataType->fill([
-                'name'                  => 'menus',
-                'display_name_singular' => __('voyager::seeders.data_types.menu.singular'),
-                'display_name_plural'   => __('voyager::seeders.data_types.menu.plural'),
-                'icon'                  => 'voyager-list',
-                'model_name'            => 'TCG\\Voyager\\Models\\Menu',
-                'controller'            => '',
-                'generate_permissions'  => 1,
-                'description'           => '',
-            ])->save();
-        }
-
-        $dataType = $this->dataType('slug', 'roles');
-        if (!$dataType->exists) {
-            $dataType->fill([
-                'name'                  => 'roles',
-                'display_name_singular' => __('voyager::seeders.data_types.role.singular'),
-                'display_name_plural'   => __('voyager::seeders.data_types.role.plural'),
-                'icon'                  => 'voyager-lock',
-                'model_name'            => 'TCG\\Voyager\\Models\\Role',
-                'controller'            => '',
-                'generate_permissions'  => 1,
-                'description'           => '',
-            ])->save();
-        }
-    }
-
-    /**
-     * [dataType description].
-     *
-     * @param [type] $field [description]
-     * @param [type] $for   [description]
-     *
-     * @return [type] [description]
-     */
-    protected function dataType($field, $for)
-    {
-        return DataType::firstOrNew([$field => $for]);
+        \DB::table('data_types')->delete();
+        
+        \DB::table('data_types')->insert(array (
+            0 => 
+            array (
+                'id' => 1,
+                'name' => 'users',
+                'slug' => 'users',
+                'display_name_singular' => 'User',
+                'display_name_plural' => 'Users',
+                'icon' => 'voyager-person',
+                'model_name' => 'TCG\\Voyager\\Models\\User',
+                'policy_name' => 'TCG\\Voyager\\Policies\\UserPolicy',
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2018-05-12 04:13:57',
+                'updated_at' => '2018-05-12 04:13:57',
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'menus',
+                'slug' => 'menus',
+                'display_name_singular' => 'Menu',
+                'display_name_plural' => 'Menus',
+                'icon' => 'voyager-list',
+                'model_name' => 'TCG\\Voyager\\Models\\Menu',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2018-05-12 04:13:57',
+                'updated_at' => '2018-05-12 04:13:57',
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'roles',
+                'slug' => 'roles',
+                'display_name_singular' => 'Role',
+                'display_name_plural' => 'Roles',
+                'icon' => 'voyager-lock',
+                'model_name' => 'TCG\\Voyager\\Models\\Role',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2018-05-12 04:13:57',
+                'updated_at' => '2018-05-12 04:13:57',
+            ),
+            3 => 
+            array (
+                'id' => 4,
+                'name' => 'candidatos',
+                'slug' => 'candidatos',
+                'display_name_singular' => 'Candidato',
+                'display_name_plural' => 'Candidatos',
+                'icon' => 'voyager-study',
+                'model_name' => 'App\\Candidato',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null}',
+                'created_at' => '2018-05-12 04:54:10',
+                'updated_at' => '2018-05-12 06:10:58',
+            ),
+            4 => 
+            array (
+                'id' => 6,
+                'name' => 'edicoes',
+                'slug' => 'edicoes',
+                'display_name_singular' => 'Edição',
+                'display_name_plural' => 'Edições',
+                'icon' => 'voyager-settings',
+                'model_name' => 'App\\Edicao',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null}',
+                'created_at' => '2018-05-12 04:55:49',
+                'updated_at' => '2018-05-12 04:55:49',
+            ),
+        ));
+        
+        
     }
 }
