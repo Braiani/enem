@@ -87,7 +87,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 1,
                 'details' => '{"order_column":null,"order_display_column":null}',
                 'created_at' => '2018-05-12 04:54:10',
-                'updated_at' => '2018-05-12 06:10:58',
+                'updated_at' => '2018-05-17 04:03:33',
             ),
             4 => 
             array (
@@ -106,6 +106,24 @@ class DataTypesTableSeeder extends Seeder
                 'details' => '{"order_column":null,"order_display_column":null}',
                 'created_at' => '2018-05-12 04:55:49',
                 'updated_at' => '2018-05-12 04:55:49',
+            ),
+            5 => 
+            array (
+                'id' => 7,
+                'name' => 'campus',
+                'slug' => 'campus',
+                'display_name_singular' => 'Campus',
+                'display_name_plural' => 'Campi',
+                'icon' => 'voyager-company',
+                'model_name' => 'App\\Campus',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null}',
+                'created_at' => '2018-05-17 00:24:21',
+                'updated_at' => '2018-05-17 00:24:21',
             ),
         ));
         

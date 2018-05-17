@@ -26,7 +26,7 @@ class CandidatosDimmer extends AbstractWidget
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-group',
             'title'  => "{$count} Candidatos",
-            'text'   => "{$count} candidatos realizaram as provas de 2009 a 2016 e estão cadastrados no sistema.",
+            'text'   => "{$count} candidatos cadastrados no sistema.",
             'button' => [
                 'text' => 'Ver todos os candidatos',
                 'link' => route('voyager.candidatos.index'),

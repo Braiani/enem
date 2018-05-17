@@ -305,6 +305,46 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2018-05-12 04:55:49',
                 'updated_at' => '2018-05-12 04:55:49',
             ),
+            36 => 
+            array (
+                'id' => 37,
+                'key' => 'browse_campus',
+                'table_name' => 'campus',
+                'created_at' => '2018-05-17 00:24:21',
+                'updated_at' => '2018-05-17 00:24:21',
+            ),
+            37 => 
+            array (
+                'id' => 38,
+                'key' => 'read_campus',
+                'table_name' => 'campus',
+                'created_at' => '2018-05-17 00:24:21',
+                'updated_at' => '2018-05-17 00:24:21',
+            ),
+            38 => 
+            array (
+                'id' => 39,
+                'key' => 'edit_campus',
+                'table_name' => 'campus',
+                'created_at' => '2018-05-17 00:24:21',
+                'updated_at' => '2018-05-17 00:24:21',
+            ),
+            39 => 
+            array (
+                'id' => 40,
+                'key' => 'add_campus',
+                'table_name' => 'campus',
+                'created_at' => '2018-05-17 00:24:21',
+                'updated_at' => '2018-05-17 00:24:21',
+            ),
+            40 => 
+            array (
+                'id' => 41,
+                'key' => 'delete_campus',
+                'table_name' => 'campus',
+                'created_at' => '2018-05-17 00:24:21',
+                'updated_at' => '2018-05-17 00:24:21',
+            ),
         ));
         
         

@@ -38,7 +38,7 @@
                                 <div id="search-input">
                                     <select id="search_key" name="key">
                                         @foreach($searchable as $key)
-                                            @if (!in_array($key, $dataTypeContent[0]->notSearchable))
+                                            @if (!in_array($key, app($dataType->model_name)->notSearchable))
                                                 <option value="{{ $key }}" @if($search->key == $key){{ 'selected' }}@endif>{{ ucwords(str_replace('_', ' ', $key)) }}</option>
                                             @endif
                                         @endforeach

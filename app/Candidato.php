@@ -10,6 +10,6 @@ class Candidato extends Model
 
     public function getNotSearchableAttribute()
     {
-        return ['id', 'edicao_id', 'nu_inscricao', 'cn', 'ch', 'lc', 'mat', 'red'];
+        return ['id', 'edicao_id', 'nu_inscricao', 'cn', 'ch', 'lc', 'mat', 'red', 'campus_id'];
     }
 }
